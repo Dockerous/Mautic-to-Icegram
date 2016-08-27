@@ -5,6 +5,8 @@
  * Version: 1.0
  * Author: Dockerous
  * Author URI: http://do.ckero.us
+ * License: GPL3 or Later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  */
 
 require_once __DIR__ . '/log/Psr/Log/LoggerInterface.php';
