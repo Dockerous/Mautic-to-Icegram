@@ -8,7 +8,7 @@ if (!defined('ABSPATH'))
 if (!class_exists('MTC_to_IG_Form_Menu')) {
 
 
-    class MTC_to_IG_Form_Menu extends CJF_Base_Menu{
+    class MTC_to_IG_Form_Menu extends MTI_Base_Menu{
 
         var $options;
         var $menu_title;
