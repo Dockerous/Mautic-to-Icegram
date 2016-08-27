@@ -41,3 +41,19 @@ require_once __DIR__ . '/api-ibrary/lib/Exception/UnexpectedResponseFormatExcept
 require_once __DIR__ . '/api-ibrary/lib/MauticApi.php';
 require_once __DIR__ . '/urlify/URLify.php';
 
+require_once 'admin/options.php';
+global $mtc_to_ig_options;
+$mtc_to_ig_options = new MTI_Base_Options("mtc_to_ig");
+require_once 'classes/ClassBase.php';
+require_once 'classes/ClassMauticForm.php';
+require_once 'admin/menu_class.php';
+require_once 'admin/main_menu.php';
+global $mtc_to_ig_main_menu;
+$mtc_to_ig_main_menu = new MTC_to_IG_Main_Menu($mtc_to_ig_options);
+require_once 'admin/form_menu.php';
+global $mtc_to_ig_form_menu;
+$mtc_to_ig_form_menu = new MTC_to_IG_Form_Menu($mtc_to_ig_options);
+require_once 'post_type_base.php';
+require_once 'post_type_mautic_form.php';
+global $mautic_form_post_type;
+$mautic_form_post_type = new Post_Type_Mautic_Form($mtc_to_ig_options);
