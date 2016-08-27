@@ -4,3 +4,6 @@
 [submodule "api-library"]
 	path = api-library
 	url = https://github.com/Dockerous/api-library.git
+[submodule "log"]
+	path = log
+	url = https://github.com/php-fig/log.git
