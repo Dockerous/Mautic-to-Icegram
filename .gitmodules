@@ -1,0 +1,6 @@
+[submodule "urlify"]
+	path = urlify
+	url = https://github.com/jbroadway/urlify
+[submodule "api-library"]
+	path = api-library
+	url = https://github.com/Dockerous/api-library.git
