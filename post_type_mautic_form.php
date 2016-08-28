@@ -12,7 +12,7 @@ class Post_Type_Mautic_Form extends MTI_Post_Type_Base{
         $this->url = $this->options->get_url;
         $this->client_key = $this->options->get_client_key;
         $this->client_secret = $this->options->get_client_secret;
-        $this->token = $this->options-accessToken;
+        $this->token = $this->options->accessToken;
         $this->token_secret = $this->options->accessTokenSecret;
         add_shortcode('mautic-icegram', array($this, 'execute_shortcode'));
         add_filter('add_icegram_script',array($this,'add_mautic_script'),50);
