@@ -74,6 +74,14 @@ if (!class_exists('MTC_to_IG_Main_Menu')) {
             );
             
             add_settings_field(
+                $this->options->prefix .'_callback_url',
+                'Callback URL',
+                array($this,'callback_url_output'),
+                $this->page_id,
+                $this->options->prefix .'_settings_section'
+            );
+            
+            add_settings_field(
                 $this->options->prefix .'_get_client_key',
                 'Client Key',
                 array($this,'client_key_output'),
@@ -198,6 +206,10 @@ if (!class_exists('MTC_to_IG_Main_Menu')) {
             $key = $this->options->prefix .'_get_url';
             $subtext = '<p>Enter the URL to your Mautic instance without the trailing slash "/" e.g. http://www.example.com/mautic.</p>';
             $this->output_input($key,$subtext,60);
+        }
+
+        function callback_url_output($args){
+            echo '<p>Your callback url is:</p><p>'.admin_url( 'admin.php?page='. $this->options->prefix.'_main').'</p>';
         }
 
         function client_key_output($args){
